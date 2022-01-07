@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Bookmark landing page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                screens: {
+                    d: "1440px",
+                },
+                fontFamily: {
+                    sans: "Rubik",
+                },
+            },
+        };
+    </script>
+    <style type="text/tailwindcss">
+        @font-face {
+            font-family: "Rubik";
+            font-weight: 400;
+            src: url("fonts/Rubik-Regular.ttf") format("truetype");
+        }
+
+        @font-face {
+            font-family: "Rubik";
+            font-weight: 500;
+            src: url("fonts/Rubik-Medium.ttf") format("truetype");
+        }
+
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+<header class="px-[168px] py-[55px]">
+    <nav class="flex justify-between">
+        <img
+                src="images/logo-bookmark.svg"
+                alt="logo-bookmark"
+                class="h-full"
+        />
+        <div>
+            <ul class="flex space-x-[45px] items-center -mt-[12px]">
+                <li class="uppercase text-[14px] tracking-wide">Features</li>
+                <li class="uppercase text-[14px] tracking-wide">Pricing</li>
+                <li class="uppercase text-[14px] tracking-wide">Contact</li>
+                <li class="px-[32px] py-[12px] uppercase bg-[#fa5757] rounded-lg text-white text-[14px] tracking-wide">
+                    Login
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="grid grid-cols-2 relative">
+        <div>
+            <h1 class="text-[50px] mt-[185px] leading-[50px] tracking-tight">
+                A Simple Bookmark Manager
+            </h1>
+            <p class="mt-[25px] text-[20px]">
+                A clean and simple interface to organize your favourite websites.
+                Open a new browser tab and see your sites load instantly. Try it for
+                free.
+            </p>
+            <div class="flex space-x-[20px]">
+                <a href="#"
+                   class="px-[22px] py-[12px] bg-[#5368df] mt-[25px] text-white rounded-lg text-[14px] tracking-wide">
+                    Get it on Chrome
+                </a>
+                <a href="#"
+                   class="px-[22px] py-[12px] bg-[#F7F7F7] shadow mt-[25px] text-[14px] rounded-lg tracking-wide">
+                    Get it on Firefox
+                </a>
+            </div>
+        </div>
+        <div class="h-[454px] w-[643px]">
+            <div class="absolute bg-[#5368df] rounded-l-full h-[345px] w-[510px] bottom-[-120px] right-[-170px] z-[-1]"></div>
+            <img class="mt-[105px] ml-[15px] h-full w-full"
+                 src="images/illustration-hero.svg"
+                 alt=""/>
+        </div>
+    </div>
+</header>
+<section>
+    <h2 class="text-center text-[32px] font-medium mt-[150px]">Features</h2>
+    <div>
+        <p class="w-[550px] mx-auto mt-[15px] text-[18px] text-center text-[#9194a1]">
+            Our aim is to make it quick and easy for you to access your favourite
+            websites. Your bookmarks sync between your devices so you can access
+            them on the go.
+        </p>
+    </div>
+
+    <div class="mt-[48px] h-[70px] w-[750px] mx-auto">
+        <ul class="grid grid-cols-3">
+            <li class="py-[22px] px-[42px] tracking-wide border-b-[5px] border-b-[#fa5757] text-center">
+                Simple Bookmarking
+            </li>
+            <li class="py-[22px] px-[42px] tracking-wide text-center">
+                Speedy Searching
+            </li>
+            <li class="py-[22px] px-[42px] tracking-wide text-center">
+                Easy Sharing
+            </li>
+        </ul>
+    </div>
+
+    <div class="grid grid-cols-2 px-[165px]">
+        <div class="h-full w-full relative">
+            <img class="mt-[75px] ml-[5px]"
+                 src="images/illustration-features-tab-1.svg"
+                 alt=""/>
+            <div class="absolute bg-[#5368df] rounded-r-full h-[345px] w-[632px] bottom-[-85px] right-[80px] z-[-1]"></div>
+        </div>
+        <div class="ml-[105px] -mt-[50px]">
+            <h1 class="text-[35px] mt-[185px] tracking-tight font-medium">
+                Bookmark in one click
+            </h1>
+            <p class="mt-[10px] text-[18px] text-[#9194a1]">
+                Organize your bookmarks however you like. Our simple drag-and-drop
+                interface gives you complete control over how you manage your
+                favourite sites.
+            </p>
+            <div class="flex">
+                <a href="#" class="px-[22px] py-[12px] bg-[#5368df] mt-[30px] text-white rounded-lg text-[14px] tracking-wide">
+                    More Info
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2 class="text-center text-[32px] font-medium mt-[230px]">
+        Download the extension
+    </h2>
+    <p class="w-[550px] mx-auto mt-[20px] text-[18px] text-center text-[#9194a1]">
+        We’ve got more browsers in the pipeline. Please do let us know if you’ve
+        got a favourite you’d like us to prioritize.
+    </p>
+    <div class="grid grid-cols-3 gap-[30px] w-[900px] mx-auto mt-[60px]">
+        <div class="shadow-xl h-[360px] w-[270px] rounded-xl flex flex-col items-center">
+            <img class="mt-[30px]" src="images/logo-chrome.svg" alt=""/>
+            <h3 class="font-medium mt-[35px] text-[20px]">Add to Chrome</h3>
+            <h3 class="font-medium mt-[5px] text-[14px] text-[#9194a1]">
+                Minimum version 62
+            </h3>
+            <img src="images/bg-dots.svg" class="mt-[35px]" alt=""/>
+            <a href="#" class="px-[36px] py-[12px] bg-[#5368df] mt-[26px] text-white rounded-lg text-[14px] tracking-wide">
+                Add & Install Extension
+            </a>
+        </div>
+        <div class="shadow-xl h-[360px] w-[270px] rounded-xl flex flex-col items-center mt-[40px]">
+            <img class="mt-[30px]" src="images/logo-firefox.svg" alt=""/>
+            <h3 class="font-medium mt-[35px] text-[20px]">Add to Firefox</h3>
+            <h3 class="font-medium mt-[5px] text-[14px] text-[#9194a1]">
+                Minimum version 55
+            </h3>
+            <img src="images/bg-dots.svg" class="mt-[35px]" alt=""/>
+            <a href="#" class="px-[36px] py-[12px] bg-[#5368df] mt-[26px] text-white rounded-lg text-[14px] tracking-wide">
+                Add & Install Extension
+            </a>
+        </div>
+        <div class="shadow-xl h-[360px] w-[270px] rounded-xl flex flex-col items-center mt-[80px]">
+            <img class="mt-[30px]" src="images/logo-opera.svg" alt=""/>
+            <h3 class="font-medium mt-[35px] text-[20px]">Add to Opera</h3>
+            <h3 class="font-medium mt-[5px] text-[14px] text-[#9194a1]">
+                Minimum version 55
+            </h3>
+            <img src="images/bg-dots.svg" class="mt-[35px]" alt=""/>
+            <a href="#" class="px-[36px] py-[12px] bg-[#5368df] mt-[26px] text-white rounded-lg text-[14px] tracking-wide">
+                Add & Install Extension
+            </a>
+        </div>
+    </div>
+</section>
+<section class="mt-[50px] px-[160px]">
+    <h2 class="text-center text-[32px] font-medium mt-[145px]">
+        Customer review
+    </h2>
+    <p
+            class="w-[550px] mx-auto mt-[20px] text-[18px] text-center text-[#9194a1]"
+    >
+        We’ve got more browsers in the pipeline. Please do let us know if you’ve
+        got a favourite you’d like us to prioritize.
+    </p>
+    <div class="mt-[25px] grid d:grid-cols-4 gap-7">
+        <div
+                class="bg-[#fa5757] rounded-lg shadow-[0_1rem_3rem_rgba(0,0,0,0.1)] p-7 d:p-8 flex flex-col gap-5 relative d:col-span-2"
+        >
+            <div class="flex items-center gap-4 z-20 relative">
+                <img
+                        src="images/image-daniel.jpg"
+                        alt="Daniel photo"
+                        class="h-10 rounded-full border-2 border-white border-opacity-50"
+                />
+                <div class="text-sm md:text-base">
+                    <h3 class="text-white">Daniel Clifford</h3>
+                    <h6 class="text-white text-opacity-50">Verified Graduate</h6>
+                </div>
+            </div>
+            <h1 class="text-white text-xl d:text-2xl z-20 relative">
+                I received a job offer mid-course, and the subjects I learned were
+                current, if not more so, in the company I joined. I honestly feel I
+                got every penny’s worth.
+            </h1>
+            <p class="text-white text-opacity-70 text-sm md:text-base">
+                “ I was an EMT for many years before I joined the bootcamp. I’ve
+                been looking to make a transition and have heard some people who had
+                an amazing experience here. I signed up for the free intro course
+                and found it incredibly fun! I enrolled shortly thereafter. The next
+                12 weeks was the best - and most grueling - time of my life. Since
+                completing the course, I’ve successfully switched careers, working
+                as a Software Engineer at a VR startup. ”
+            </p>
+        </div>
+        <div
+                class="bg-[#252b46] rounded-lg shadow-[0_1rem_3rem_rgba(0,0,0,0.1)] p-7 d:p-8 flex flex-col gap-5 relative d:col-span-1"
+        >
+            <div class="flex items-center gap-4 z-20 relative">
+                <img
+                        src="images/image-jonathan.jpg"
+                        alt="Jonathan photo"
+                        class="h-10 rounded-full border-2 border-white border-opacity-50"
+                />
+                <div class="text-sm md:text-base re">
+                    <h3 class="text-white">Jonathan Walters</h3>
+                    <h6 class="text-white text-opacity-50">Verified Graduate</h6>
+                </div>
+            </div>
+            <h1 class="text-white text-xl d:text-2xl z-20 relative">
+                The team was very supportive and kept me motivated
+            </h1>
+            <p class="text-white text-opacity-70 text-sm md:text-base">
+                “ I started as a total newbie with virtually no coding skills. I now
+                work as a mobile engineer for a big company. This was one of the
+                best investments I’ve made in myself. ”
+            </p>
+        </div>
+        <div
+                class="bg-white rounded-lg shadow-[0_1rem_3rem_rgba(0,0,0,0.1)] p-7 flex flex-col gap-5 relative d:col-span-1"
+        >
+            <div class="flex items-center gap-4 z-20 relative">
+                <img
+                        src="images/image-jeanette.jpg"
+                        alt="Jeanette photo"
+                        class="h-10 rounded-full border-2 border-white border-opacity-50"
+                />
+                <div class="text-sm md:text-base re">
+                    <h3 class="text-[#252b46]">Jeanette Harmon</h3>
+                    <h6 class="text-[#252b46] text-opacity-50">Verified Graduate</h6>
+                </div>
+            </div>
+            <h1 class="text-[#252b46] font-bold text-xl d:text-2xl z-20 relative">
+                An overall wonderful and rewarding experience
+            </h1>
+            <p class="text-[#252b46] text-opacity-70 text-sm md:text-base">
+                “ Thank you for the wonderful experience! I now have a job I really
+                enjoy, and make a good living while doing something I love. ”
+            </p>
+        </div>
+        <div
+                class="bg-[#9194a1] rounded-lg shadow-[0_1rem_3rem_rgba(0,0,0,0.1)] p-7 d:p-8 flex flex-col gap-5 relative d:col-span-2"
+        >
+            <div class="flex items-center gap-4 z-20 relative">
+                <img
+                        src="images/image-patrick.jpg"
+                        alt="Patrick photo"
+                        class="h-10 rounded-full border-2 border-white border-opacity-50"
+                />
+                <div class="text-sm md:text-base re">
+                    <h3 class="text-white">Patrick Abrams</h3>
+                    <h6 class="text-white text-opacity-50">Verified Graduate</h6>
+                </div>
+            </div>
+            <h1 class="text-white text-xl d:text-2xl z-20 relative">
+                Awesome teaching support from TAs who did the bootcamp themselves.
+                Getting guidance from them and learning from their experiences was
+                easy.
+            </h1>
+            <p class="text-white text-opacity-70 text-sm md:text-base">
+                “ The staff seem genuinely concerned about my progress which I find
+                really refreshing. The program gave me the confidence necessary to
+                be able to go out in the world and present myself as a capable
+                junior developer. The standard is above the rest. You will get the
+                personal attention you need from an incredible community of smart
+                and amazing people. ”
+            </p>
+        </div>
+        <div
+                class="bg-white rounded-lg shadow-[0_1rem_3rem_rgba(0,0,0,0.1)] p-7 d:p-8 flex flex-col gap-5 relative d:col-span-1 d:col-start-4 d:row-start-1 d:row-span-2"
+        >
+            <div class="flex items-center gap-4 z-20 relative">
+                <img
+                        src="images/image-kira.jpg"
+                        alt="Kira photo"
+                        class="h-10 rounded-full border-2 border-white border-opacity-50"
+                />
+                <div class="text-sm md:text-base re">
+                    <h3 class="text-[#252b46]">Kira Whittle</h3>
+                    <h6 class="text-[#252b46] text-opacity-50">Verified Graduate</h6>
+                </div>
+            </div>
+            <h1 class="text-[#252b46] font-bold text-xl d:text-2xl z-20 relative">
+                Such a life-changing experience. Highly recommended!
+            </h1>
+            <p class="text-[#252b46] text-opacity-70 text-sm md:text-base">
+                “ Before joining the bootcamp, I’ve never written a line of code. I
+                needed some structure from professionals who can help me learn
+                programming step by step. I was encouraged to enroll by a former
+                student of theirs who can only say wonderful things about the
+                program. The entire curriculum and staff did not disappoint. They
+                were very hands-on and I never had to wait long for assistance. The
+                agile team project, in particular, was outstanding. It took my
+                learning to the next level in a way that no tutorial could ever
+                have. In fact, I’ve often referred to it during interviews as an
+                example of my developent experience. It certainly helped me land a
+                job as a full-stack developer after receiving multiple offers. 100%
+                recommend! ”
+            </p>
+        </div>
+    </div>
+</section>
+<section class="bg-[#5368df] mt-[130px] py-[70px]">
+    <div class="w-[440px] mx-auto text-white">
+        <div class="text-center tracking-[5px] text-[12px] uppercase">
+            35,000+ already joined
+        </div>
+        <h2 class="text-[30px] text-center mt-[30px]">
+            Stay up-to-date with what we’re doing
+        </h2>
+        <div class="flex mt-[25px] space-x-[15px]">
+            <input
+                    type="text"
+                    class="w-full rounded-lg px-[20px] placeholder:text-[14px]"
+                    placeholder="Enter your email address"
+            />
+            <a
+                    class="w-[190px] text-center py-[15px] bg-[#fa5757] rounded-lg text-white text-[14px] tracking-wide"
+            >Contact Us</a
+            >
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="bg-[#242946] h-[90px] flex items-center text-white">
+        <nav class="flex justify-between px-[160px] w-full">
+            <div class="flex items-center">
+                <img
+                        src="images/logo-bookmark-white.svg"
+                        alt="logo-bookmark"
+                        class="h-full"
+                />
+                <div>
+                    <ul class="flex space-x-[45px] items-center ml-[65px]">
+                        <li class="uppercase text-[14px] tracking-wide">Features</li>
+                        <li class="uppercase text-[14px] tracking-wide">Pricing</li>
+                        <li class="uppercase text-[14px] tracking-wide">Contact</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex space-x-[45px]">
+                <img src="images/icon-facebook.svg" alt=""/>
+                <img src="images/icon-twitter.svg" alt=""/>
+            </div>
+        </nav>
+    </div>
+    <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/ayce45" target="_blank">Ayce45</a>.
+    </p>
+</footer>
+</body>
+</html>
